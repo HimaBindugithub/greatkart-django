@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -134,3 +136,20 @@ STATICFILES_DIRS = [
 #media_files configuration
 MEDIA_URL='/media/'
 MEDIA_ROOT=BASE_DIR /'media'
+
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",
+    
+}
+
+# SMTP configuration
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'binduh957@gmail.com'
+EMAIL_HOST_PASSWORD = 'ziyx evlf govw zosb'
+EMAIL_USE_TLS = True
+
